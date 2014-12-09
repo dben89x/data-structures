@@ -1,4 +1,5 @@
 require 'pp'
+require_relative 'curriculum'
 
 # Require the Ruby file
 #
@@ -28,3 +29,13 @@ require 'pp'
 #   Jules Herzog
 #   Julia Hilll
 #   etc...
+
+CURRICULUM[:units].each {|unit|
+  unit[:lessons].each {|lesson|
+    lesson[:occurrences].each {|occurrence, data|
+      data[:comments].each {|comment|
+        puts comment[:user][:name]
+      }
+    }
+  }
+}

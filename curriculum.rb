@@ -10,7 +10,7 @@ CURRICULUM = {
             "2013-05-08" => {
               cohort: {id: 1, name: "g4"},
               comments: [
-              ]
+              ] 
             },
             "2013-06-08" => {
               cohort: {id: 2, name: "g5"},

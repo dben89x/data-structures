@@ -1,4 +1,5 @@
 require 'pp'
+require_relative 'curriculum'
 
 # Require the Ruby file
 #
@@ -9,3 +10,13 @@ require 'pp'
 #   Orientation - 9
 #   Rails Basics - 15
 #   CRUD - 12
+
+CURRICULUM[:units].each {|unit|
+  count = 0
+  unit[:lessons].each {|lesson|
+    lesson[:occurrences].each {|occurrence, data|
+      count += data[:comments].count
+    }
+  }
+  puts "#{unit[:name]} - #{count}"
+}
